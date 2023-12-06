@@ -1,0 +1,12 @@
+version: '1.0'
+services:
+  react-app:
+    build: ./React
+    ports:
+      - "3000:80"
+    depends_on:
+      - flask-app
+  flask-app:
+    build: ./Python
+    ports:
+      - "5000:5000"
